@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill" class="full-width flex-1">
+  <mat-label>Nome ou Doc#</mat-label>
+  <input [(ngModel)]="termInput" matInput />
+  <mat-icon matPrefix>search</mat-icon>
+  <button matSuffix mat-button (click)="onSearchClick()">
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</mat-form-field>

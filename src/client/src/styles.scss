@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// CUSTOM
+
+.container {
+  display: flex;
+  align-items: stretch;
+}
+.full-width {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+
+.mat-form-field {
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+/* auto fill form field: fields that are filled with response data after a request */
+.autofill-form-field.mat-form-field-appearance-fill {
+  .mat-form-field-flex {
+    // make form-field transparent
+    background-color: transparent;
+
+    &:hover {
+      // remove underline on form-field hover
+      ~ .mat-form-field-underline .mat-form-field-ripple {
+        height: 0;
+      }
+    }
+  }
+  .mat-form-field-underline {
+    // add a dashed bordem bottom to form-field
+    border-bottom: 1px dashed;
+    &::before {
+      height: 0;
+    }
+  }
+}
+
+.style-success {
+  background-color: #4bb543;
+}
+.style-error {
+  background-color: #ca062e;
+}
+.mat-simple-snackbar,
+.mat-simple-snackbar-action {
+  color: white;
+  font-weight: bolder;
+}

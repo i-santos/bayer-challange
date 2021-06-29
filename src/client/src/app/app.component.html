@@ -1,0 +1,36 @@
+<mat-progress-bar
+  [style.opacity]="searching ? '1' : '0'"
+  mode="query"
+></mat-progress-bar>
+
+<div class="container">
+  <farmer-search-card
+    (onSearchEvent)="searching = true"
+    [farmerSearchAbstractProvider]="myFarmerSearchProvider"
+    (onPartnerSelectedEvent)="onPartnerSelectedEvent($event)"
+  >
+  </farmer-search-card>
+  <mat-form-field
+    appearance="fill"
+    class="full-width flex-2 autofill-form-field"
+  >
+    <mat-label>Remetente</mat-label>
+    <input matInput readonly [(ngModel)]="farmer.name" />
+  </mat-form-field>
+</div>
+<div class="container">
+  <mat-form-field
+    appearance="fill"
+    class="full-width flex-1 autofill-form-field"
+  >
+    <mat-label>Doc #</mat-label>
+    <input matInput readonly [(ngModel)]="farmer.document.number" />
+  </mat-form-field>
+  <mat-form-field
+    appearance="fill"
+    class="full-width flex-3 autofill-form-field"
+  >
+    <mat-label>Endereço</mat-label>
+    <input matInput readonly [(ngModel)]="farmer.address.address" />
+  </mat-form-field>
+</div>
