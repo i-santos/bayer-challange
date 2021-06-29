@@ -8,3 +8,11 @@ node_modules
 **/*.sqlite
 
 __tests__/coverage
+
+**/dist
+
+package-lock.json
+**/package-lock.json
+
+yarn.lock
+**/yarn.lock

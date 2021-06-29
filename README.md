@@ -43,7 +43,7 @@
    $ cp .env.sample .env
    ```
 
-4. ### PostgreSQL running with
+4. ### (Optional, as sqlite is preset by default) PostgreSQL running with
 
    - User: bayer_user
    - Password: bayer_pass
@@ -59,7 +59,13 @@
 
    ## Note
 
-   **You can set `DB_DIALECT=sqlite` at `.env`/`.env.test` to use a local database file-based instead of running an instance of PostgreSQL**
+   **You can set `DB_DIALECT=sqlite` at `.env`/`.env.test` to use a local database file-based instead of running an instance of PostgreSQL (this is default at `.env.sample`)**
+
+   **To use PostregSQL, set `DB_DIALECT=postgres` at `.env`/`.env.test`.**
+
+   **You can use different dialects for each environment:**
+
+   **`DB_DIALECT=postgres` at `.env` and `DB_DIALECT=sqlite` at `.env.test`, for instance.**
 
    ***
 
@@ -85,7 +91,7 @@ $ cd ../..
 # from root, install dependencies
 $ npm install
 
-# copy .env sample file
+# make sure .env.sample file was copied to .env
 $ cp .env.sample .env
 # run migrations
 $ npx sequelize db:migrate
@@ -98,6 +104,20 @@ $ npm run start
 # 3. Access the application
 
 Access the application at http://localhost:3000 or at any port set in `PORT` at `.env` file
+
+Some dummy farmers were added to the database:
+
+#### Farmer #1
+
+- Name: Tester
+- Doc Number: 123456789-11
+
+#### Farmer #2
+
+- Name: Another
+- Doc Number: 123456789-22
+
+You can search by values above to play with the application.
 
 # 4. Run tests
 
